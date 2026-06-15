@@ -4,7 +4,7 @@
 | Nama  | NPM |
 | ----- | --- |
 | Dheka Airlangga  | 452421002 |
-| Farhan Ridwan Badhawi  | 452421003 |
+| Farhan Ridwan Badhawi  | 4524210037 |
 | Ghifari Ezra Ramadhan  | 4524210041 |
 
 # Sistem Informasi Akademik MTs Al-Fitrah
