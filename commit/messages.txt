@@ -1,0 +1,5 @@
+﻿docs(README): perbarui dokumentasi proyek
+
+- Menambahkan deskripsi fitur utama aplikasi (Otentikasi, InMemory DB, RBAC, CRUD Materi).
+- Menambahkan penjelasan struktur folder dan penerapan konsep OOP.
+- Menyediakan panduan instalasi dan kredensial dummy untuk testing.
