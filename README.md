@@ -49,12 +49,25 @@ src/
 - **OOP Concepts**: *Inheritance* (Turunan `Pengguna`), *Polymorphism* (Overriding method login, dll.), *Abstraction* (Penggunaan Interface / Contract).
 - **Validasi**: RegEx API untuk verifikasi email saat proses otentikasi.
 
-## 💻 Cara Menjalankan
+## 💻 Cara Menjalankan (Cross-Platform)
 
-1. Pastikan Anda memiliki **JDK (Java Development Kit)** terinstal di mesin Anda.
-2. Buka proyek ini menggunakan Visual Studio Code atau IDE Java favorit Anda (seperti IntelliJ / Eclipse).
-3. Jalankan file utama: `src/com/main/App.java` (Klik Kanan -> Run Java).
-4. Gunakan kredensial Dummy (contoh untuk login guru):
+Cara ini dapat dijalankan menggunakan Terminal atau CLI, sehingga mendukung Windows, macOS, maupun Linux.
+
+1. Pastikan Anda memiliki **JDK (Java Development Kit)** terinstal (verifikasi dengan perintah `java -version` di terminal).
+2. Buka Terminal / PowerShell / Command Prompt dan arahkan ke folder root proyek ini.
+3. (Opsional) Buat direktori `bin` jika belum ada:
+   ```bash
+   mkdir bin
+   ```
+4. **Kompilasi source code**:
+   ```bash
+   javac -d bin -sourcepath src src/com/main/App.java
+   ```
+5. **Jalankan aplikasi**:
+   ```bash
+   java -cp bin com.main.App
+   ```
+6. Gunakan kredensial Dummy (contoh untuk login guru):
    - **Email**: `naila@mts.com` atau `maghfiroh@mts.com`
    - **Password**: `guru123`
 
