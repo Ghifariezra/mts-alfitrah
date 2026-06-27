@@ -1,0 +1,1 @@
+javac -d bin (Get-ChildItem -Path src -Filter *.java -Recurse).FullName; if ($?) { java -cp bin com.main.App }

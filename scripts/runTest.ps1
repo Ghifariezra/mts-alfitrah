@@ -1,0 +1,1 @@
+java -jar lib\junit-platform-console-standalone-1.10.0.jar -cp bin --scan-classpath
