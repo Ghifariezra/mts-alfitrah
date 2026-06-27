@@ -2,16 +2,19 @@ package com.main;
 
 import java.util.Scanner;
 
+import com.main.users.Admin;
+import com.main.users.Guru;
+import com.main.users.Pengguna;
+import com.main.users.Siswa;
+
 public class App {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         dummyData();
 
-        // 1. Panggil fitur login dan simpan objek yang dikembalikan ke dalam variabel
         Pengguna penggunaAktif = fiturLogin(scanner);
 
-        // 2. Jika login berhasil (tidak null), baru jalankan routing
         if (penggunaAktif != null) {
             routingMenu(scanner, penggunaAktif);
         }
@@ -32,30 +35,27 @@ public class App {
                 "Offline");
         Siswa siswa2 = new Siswa("S-002", "Az-Zahra Putri", "azzahra@siswa.mts.com", "siswa123", "Siswa", "Offline");
 
-        System.out.println("Sistem berhasil memuat " + Pengguna.databasePengguna.size() + " data pengguna.");
+        System.out.println("Sistem berhasil memuat " + Pengguna.getDatabasePengguna().size() + " data pengguna.");
         System.out.println("=========================================\n");
     }
 
-    // UBAH 1: Tipe kembalian diganti dari 'void' menjadi 'Pengguna'
     private static Pengguna fiturLogin(Scanner scanner) {
         System.out.println("=== APLIKASI MTS AL-FITRAH ===");
         System.out.println("Silakan login untuk melanjutkan.");
 
-        while (true) { // Loop terus sampai menemukan return
+        while (true) {
             System.out.print("Masukkan Email    : ");
             String inputEmail = scanner.nextLine();
 
             System.out.print("Masukkan Password : ");
             String inputPassword = scanner.nextLine();
 
-            for (Pengguna p : Pengguna.databasePengguna) {
-                if (p.email.equals(inputEmail) && p.login(inputEmail, inputPassword)) {
+            for (Pengguna p : Pengguna.getDatabasePengguna()) {
+                if (p.getEmail().equals(inputEmail) && p.login(inputEmail, inputPassword)) {
                     System.out.println("\n[LOG] Login Berhasil!");
-                    System.out.println("Selamat datang, " + p.nama + "!");
-                    System.out.println("Login sebagai : " + p.role);
-                    System.out.println("Status saat ini : " + p.status);
 
-                    // Langsung kembalikan objek penggunanya, ini otomatis menghentikan while loop!
+                    System.out.println("Selamat datang, " + p.getNamaPengguna() + "!"); 
+                    System.out.println("Status saat ini : " + p.getStatus());
                     return p;
                 }
             }
@@ -92,10 +92,16 @@ public class App {
                         guruAktif.inputNilai();
                         break;
                     case 2:
-                        guruAktif.buatTugas();
+                        guruAktif.buatTugas(
+                                "TGS-001",
+                                "Tugas Matematika",
+                                "Kerjakan soal aljabar pada halaman 5.",
+                                "tugas_aljabar.pdf",
+                                java.time.LocalDateTime.of(2024, 6, 30, 23, 59)
+                        );
                         break;
                     case 3:
-                        guruAktif.uploadMateri("MTR-001", "Matematika", "Materi Aljabar", "aljabar.pdf", "2026-06-01");
+                        guruAktif.uploadMateri("MTR-001", "Matematika", "Materi Aljabar", "aljabar.pdf");
                         break;
                     case 4:
                         guruAktif.buatLaporan();

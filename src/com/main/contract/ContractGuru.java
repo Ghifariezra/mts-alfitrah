@@ -1,9 +1,11 @@
 package com.main.contract;
 
+import java.time.LocalDateTime;
+
 public interface ContractGuru {
-    void uploadMateri(String id_materi, String judul_materi, String deskripsi, String file_materi,
-            String tanggal_upload);
-    void buatTugas();
+    void uploadMateri(String idMateri, String judulMateri, String deskripsi, String fileMateri);
+    void buatTugas(String idTugas, String judulTugas, String deskripsi, String fileTugas,
+            LocalDateTime deadline);
     void inputNilai();
     void catatAbsensi();
     void buatLaporan();

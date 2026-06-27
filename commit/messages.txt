@@ -1,1 +1,7 @@
-﻿docs(README): add running instructions
+﻿refactor: restructure packages and encapsulate entity properties
+
+- Memindahkan entitas pengguna ke package com.main.users
+- Memindahkan entitas akademik ke package com.main.tasks
+- Menerapkan enkapsulasi pada atribut Pengguna (menggunakan getter)
+- Memperbarui signature method pada ContractGuru dan ContractPengguna (termasuk penggunaan LocalDateTime)
+- Menyesuaikan import dan pemanggilan method di App.java
