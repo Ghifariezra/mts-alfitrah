@@ -56,7 +56,7 @@ test/
 ## 📊 Data Flow Diagram
 ![Data Flow Diagram MTs Al-Fitrah](public/dfd-level0.png)
 ## 📊 Entity Relationship Diagram
-![ERD MTs Al-Fitrah (SOON)](#)
+![ERD MTs Al-Fitrah (SOON)](public/ERD-Diagram.jpeg)
 ## 📊 Class Diagram
 ![Class Diagram MTs Al-Fitrah (SOON UPDATE)](public/class-diagram.png)
 
