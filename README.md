@@ -58,7 +58,7 @@ test/
 ## 📊 Entity Relationship Diagram
 ![ERD MTs Al-Fitrah (SOON)](#)
 ## 📊 Class Diagram
-![Class Diagram MTs Al-Fitrah (SOON UPDATE)](#)
+![Class Diagram MTs Al-Fitrah (SOON UPDATE)](public/class-diagram.png)
 
 ## 📚 Teknologi & Pola Desain
 
